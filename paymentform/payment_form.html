@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAYMENT FORM</title>
+    <link rel="stylesheet" href="paymentform..css">
+</head>
+<body>
+    <header>
+        <h1 style="background-color: rgb(84, 198, 3);">
+            <b style="color: rgb(4, 98, 10);"> KONOHAKAGURE TECHNOLOGIES LTD</b>
+        </h1>
+    </header>
+    <form>
+        <fieldset>
+            <legend style="font-weight: 900; font-size: 30px;"> PERSONAL INFORMATION</legend>
+            <label for="name_box">NAME:</label>
+            <input type="text" id="name_box" name="name">
+            <br>
+            <br>
+            <p> ENTER YOUR GENDER</p>
+            <label for="male">SHINOBI</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="female">KUNOICHI</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <br>
+            <br>
+            <label for="birthdate">BIRTHDATE:</label>
+            <input type="date" id="birthdate" name="birthdate">
+            <br>
+            <br>
+            <label for="rank">RANK</label>
+            <select id="rank" name="rank" size="">
+                <option value="genin">GENIN</option>
+                <option value="chunin">CHUNIN</option>
+                <option value="jonin">JONIN</option>
+            </select>
+            <br>
+            <BR>
+            <br>
+            <label for="address"> ADDRESS</label>
+            <br>
+            <textarea id="address" name="address" rows="5" cols="25"></textarea>
+            <br>
+            <br>
+            <p><u>VILLAGE:</u></p>
+            <input list="village">
+            <datalist id="village">
+                <option value="sound">HIDDEN SOUND</option>
+                <option value="sand">HIDDEN SAND</option>
+                <option value="leaf">HIDDEN LEAF</option>
+                <option value="rain">HIDDEN RAIN</option>
+                <option value="rock">HIDDEN ROCK</option>
+            </datalist>
+
+        </fieldset>  
+        <button id="submit_botton">
+            <a href="css1.html" style="text-decoration: none;">HOME</a>
+        </button>  
+    </form>
+   
+</body>
+</html>

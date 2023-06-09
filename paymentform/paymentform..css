@@ -1,0 +1,16 @@
+body{
+    background :linear-gradient(to top,rgb(195, 255, 0) ,rgba(253, 247, 73, 0.4));
+    background-repeat: no-repeat;
+    height: 90vw;
+}
+#submit_botton{
+    background-color: rgb(5, 193, 14);
+    width:5vw;
+    height:40px;
+    border-radius: 16px;
+    margin-top:20px;
+    color:white;
+    font-weight: 600;
+    border-style: groove,5px;
+    padding:10px;
+}
