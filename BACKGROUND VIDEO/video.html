@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIDEO</title>
+</head>
+<body>
+
+    <style>
+        body{
+            margin:0px;
+            padding:0px;
+            z-index: 0;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            margin:40vh;
+            color:rgb(6, 6, 6);
+            
+        }
+        #box{
+            width :40vw;
+            height: 20vh;
+            font-size: 5em;
+            text-align: center;
+            z-index: 1;
+        }
+        #toggle{
+            position: absolute;
+            top:83vh;
+            left:5vw;
+            background-color: rgb(255, 255, 255);
+            height:35px;
+            width:175px;
+            font-size: 1.5em;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding:10px;
+            color:rgb(3, 174, 171);
+            border-radius: 15px;
+            z-index: 1;
+        }
+        #cover{
+            position: absolute;
+            top:83.3vh;
+            left:5vw;
+            background-color: aqua;
+            height:52px;
+            width:100px;
+            z-index: 2;
+            border-radius: 15px;
+            transition:all ease 0.5s;
+        }
+        video{
+            position:absolute;
+            height: 100%;
+            width:100%;
+            top:0px;
+            left:0px;
+            z-index: 0;
+            object-fit: cover;
+        }
+        .load img{
+            position:absolute;
+            height: 100vh;
+            width:100vw;
+            top:0px;
+            left:0px;
+            z-index: 4;
+            visibility: visible;
+        }
+        
+    </style>
+    <div class="load"><img src="icons8-loading-circle.gif"></div>
+    <video src="Untitled video - Made with Clipchamp.mp4" id="vid" loop></video>
+    <div id="box"> Video Project</div>
+    <div id="toggle"><p id="play"> PLAY</p> <p id="pause">PAUSE</p></div>
+    <div id="cover"></div>
+    <script>
+        window.addEventListener("load",()=>{
+            document.querySelector(".load img").style.visibility="hidden";
+        });
+        document.getElementById("vid").play();
+        let pause = document.getElementById("pause");
+        let cover = document.getElementById("cover");
+        let play = document.getElementById("play");
+        pause.addEventListener("click", pau);
+        play.addEventListener("click", pla);
+        function pau (){
+            cover.style.translate="93px 0px";
+            document.getElementById("vid").pause();
+        }
+        function pla(){
+            document.getElementById("vid").play();
+            cover.style.translate="3px 0px";
+        }
+    </script>
+</body>
+</html>
