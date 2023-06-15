@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <h2 id="normal"> COLOR FLIPPER</h2>
+        <h2 id="radial"> RADIAL FLIPPER</h2>
+    </nav>
+    <div id="canvas">
+        <h1> Background Color : <span id="color">#</span></h1>
+        <button id="btn"> Click me</button>
+    </div>
+
+    <style>
+        #radial:hover{
+            color:blueviolet;
+        }
+        #normal:hover{
+            color:blueviolet;
+        }
+        body{
+            margin:0px;
+            padding:0px;
+        }
+        nav {
+            display: flex;
+            flex-direction: row;
+            justify-content:space-around;
+            background-color: rgb(255, 254, 252);
+            box-shadow: 0px 5px 15px gray;
+            font-size: larger;
+        }
+        #normal {
+            color:#03d5bc;
+        }
+        #canvas{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #canvas h1{
+            margin-top: 35vh;
+            padding:20px;
+            color: white;
+            background-color: black;
+            font-size: 45px;
+            border-radius: 10px;
+        }
+        #btn{
+            border-radius: 10px;
+            padding:20px;
+            color: white;
+            background-color: black;
+            font-size: 25px;
+        }
+    </style>
+    <script src="bcolor.js"></script>
+</body>
+</html>
