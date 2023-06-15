@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1 id="month"></h1>
+        <p id="date"></p>
+        <script>
+            setInterval(display,1000);
+            let d= new Date();
+            let months=["January","February","March","April","May","June","July","August"
+            ,"September","October","November","December"];
+            let t=d.getFullYear()+""+months[d.getMonth()];
+            document.getElementById("month").innerText = t;
+            function hour(d){ return d.getHours();}
+            function minute(d){ return d.getMinutes();}
+            function second(d){ return d.getSeconds(); }
+            function display(){
+                let g= new Date();
+                let time=  hour(g)+":"+minute(g)+":"+ second(g);
+                document.getElementById("date").innerText=time;
+            }
+        </script>
+        <style>
+            body{
+                padding:0px;
+                margin:0px;
+                background-color: rgb(0, 2, 8);                
+            }
+            #month{
+                font-size: 200px;
+                text-align: center;
+                padding:10px;
+                margin:0px;
+                color: rgb(18, 202, 253);
+
+            }
+            #date{
+                margin:30vw;
+                margin-top: 5vw;
+                width:40vw;
+                height: 40vw;
+                border: 3px;
+                border-style: solid;
+                border-color:rgb(18, 202, 253) ;
+                border-radius: 375px;
+                font-size:145px ;
+                color:rgb(18, 202, 253);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-shadow: 0px 0px 10px rgb(18, 202, 253), 0px 0px 40px rgb(18, 202, 253), 0px 0px 10px rgb(18, 202, 253);
+                /* padding:15px; */
+            }
+            
+        </style>
+    </div>
+    
+</body>
+</html>
