@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questions</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+        body{
+            margin:0px;
+            padding:0px;
+            background-color: rgb(246, 244, 244);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #box{
+            margin-top:5vh;
+            text-align: center;
+            padding:20px;
+            width:45vw;
+            height: 120vh;
+            display: flex;
+            flex-direction: column;
+            /* justify-content:space-evenly; */
+            /* align-items: center; */
+        }
+        #heading{
+            font-family: 'Italianno', cursive;
+            color: rgb(232, 160, 4);
+            font-size: 3em;
+        }
+        .question{
+            margin-bottom: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content:space-between;
+            background-color: white;
+            padding:20px 25px;
+            box-shadow: 1px 0px 3px rgb(154, 153, 153);
+            height: 5vh;
+            overflow: hidden;
+            transition: all ease-out 0.8s;
+        }
+        .question h2{
+            justify-self: flex-start;
+            margin:0px;
+            font-size: 1.5em;
+            font-family: 'Inconsolata', monospace;
+        }
+        .bi{
+            float: right;
+            align-self: flex-end;
+            font-size: 2em;
+            color: rgb(232, 160, 4);
+        }
+        .underline{
+            width:40vw;
+            height: 2px;
+            margin:0px;
+            background-color: rgb(232, 160, 4);
+        }
+        .question i:nth-child(1){
+            visibility: hidden;
+        }
+    </style>
+    <div id="box">
+        <h1 id="heading">GENERAL QUESTIONS</h1>
+        <div class="question">
+            <div>
+                <i class="bi bi-arrow-up-circle" ></i>
+                <i class="bi bi-arrow-down-circle"style="translate:32px"></i>   
+                <h2>Do you accept all major credit cards?</h2></div>
+            <div class="underline"></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In autem nihil tempora, aut incidunt beatae. Ut recusandae, deleniti dignissimos, optio doloremque consequatur mollitia quae eius possimus veniam voluptates, id tempore!
+            </p>
+        </div>
+        <div class="question">
+            <div> <i class="bi bi-arrow-up-circle" ></i>
+                <i class="bi bi-arrow-down-circle"style="translate:32px"></i>  
+                
+            <h2>Do you support Local farmers?</h2>
+            </div>
+            <div class="underline"></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In autem nihil tempora, aut incidunt beatae. Ut recusandae, deleniti dignissimos, optio doloremque consequatur mollitia quae eius possimus veniam voluptates, id tempore!
+            </p>
+        </div>
+        <div class="question">
+           <div>
+            <i class="bi bi-arrow-up-circle" ></i>
+                <i class="bi bi-arrow-down-circle"style="translate:32px"></i>  
+            <h2>Do you use organic indgredients?</h2>
+           </div>
+            <div class="underline"></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In autem nihil tempora, aut incidunt beatae. Ut recusandae, deleniti dignissimos, optio doloremque consequatur mollitia quae eius possimus veniam voluptates, id tempore!
+            </p>
+        </div>
+    </div>
+    <script>
+        let dp=document.querySelectorAll(".bi");
+         for(let i =0;i<dp.length;i++){
+            if(i%2!=0){
+                dp[i].addEventListener("click",hello);
+            }
+            else{
+                dp[i].addEventListener("click",bye);
+            }
+         }
+        // dp[0].addEventListener("click",hello);
+        function hello(){
+            this.style.visibility="hidden";
+            let x=this.previousElementSibling;
+            let dropdown = this.parentElement.parentElement;
+            dropdown.style.height="20vh";
+            x.style.visibility="visible";
+        }
+        function bye(){
+            this.style.visibility="hidden";
+            let x=this.nextElementSibling;
+            let dropdown = this.parentElement.parentElement;
+            dropdown.style.height="5vh";
+            x.style.visibility="visible";
+        }
+    </script>
+</body>
+</html>
