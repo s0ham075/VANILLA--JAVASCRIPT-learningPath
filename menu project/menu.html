@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MENU</title>
+</head>
+<body>
+    <style>
+        body{
+            margin:0px;
+            padding:0px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        body p{
+            margin:0px;
+        }
+        .under{
+            margin-bottom: 30px;
+            width:100%;
+            height: 2px;
+            background-color:rgb(222, 155, 10);
+        }
+        .tryclass{
+            width: 35vw;
+            height: 33vh;
+            margin:20px;
+            display: flex;
+            flex-direction: row;
+          
+        }
+        .info{
+            margin:0px;
+            height:90%;
+            width:60%;
+            display: flex;
+            flex-direction: column;
+            /* justify-content:space-evenly; */
+            padding:10px;
+        }
+        .head{
+            margin:0px;
+            width: 90%;
+            display: flex;
+            flex-direction: row;
+            justify-content:space-between;
+        }
+        .heading{
+            margin-top: 10vh;
+            padding: 0px;
+            text-align: center;
+            font-size: 1.5em;
+            margin-bottom: 0.5vh;
+        }
+        .underline{
+            margin-bottom:5vh;
+            width:10vw;
+            height:5px;
+            background-color:rgb(222, 155, 10);
+        }
+        .nav{
+            margin-top: 2.5vh;
+            width:50vw;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .nav button{
+            background-color: white;
+            border-color: rgb(222, 155, 10);
+            border-radius: 5px;
+            padding:5px;
+        }
+        .showboard{
+            margin-top: 7.5vh;
+            width: 80vw;
+            /* height: 150vh; */
+            padding:15px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap:wrap;
+            justify-content: space-around;
+            margin-bottom: 20vh;
+        }
+    </style>
+    <div class="heading"><h1 style="margin:0px">URI SHINOBI</h1></div>
+    <div class="underline"></div>
+    <div class="nav">
+        <button id="leaf">KONOHAKAGURE</button>
+        <button id="sand">HIDDEN SAND</button>
+        <button id="mist">HIDDEN MIST</button>
+        <button id="cloud">HIDDEN CLOUD</button>
+        <button id="rock">HIDDEN ROCK</button>
+    </div>
+    <div class="showboard"></div>
+    <script src="menu.js"></script>
+</body>
+</html>
