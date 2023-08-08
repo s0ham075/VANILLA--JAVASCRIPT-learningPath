@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLIDER</title>
+</head>
+<body>
+    <style>
+        body{
+            margin:0px;
+            padding:0px;
+            display: flex;
+            flex-direction: column;
+            background-color: black;
+        }
+        .container{
+            margin-top: 8vh;
+            margin-left: 30vh;
+            width:70vw;
+            height: 75vh;
+            background-color:rgb(37, 37, 37);
+            display:inline-flex;
+            /* flex-direction: row; */
+            white-space: nowrap;
+            overflow-x: hidden;
+        }
+        .nav{
+            margin-top: 30px;
+            margin-left: 40vw;
+        }
+        .btn{
+            background-color: #000000;
+            color:whitesmoke;
+            font-size: 2.3em;
+            border: whitesmoke;
+            /* padding: 15px; */
+        }
+        .img{
+            flex: 1 1 100%;
+            min-width: 70vw;
+            margin:0px;
+            transition: all ease-in-out 1s;
+            /* width:70vw;
+            height:75vh; */
+        }
+        #d1{
+            background-image: url("image1.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            
+        }
+        #d3{
+            background-image: url(img2.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color:white;
+        }
+        .img h1{
+            text-align: center;
+            align-self: center;
+        }
+        #inside4{
+            padding:20px;
+            margin-top: 5vh;
+        }
+        .head{
+            font-size: 4em;
+            color:orange
+        }
+        #d2{
+            background-image: linear-gradient(black,darkblue,blue);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color:white;
+
+        }
+    </style>
+    <div class="container">
+        <div class="img" id="d1"><h1 style="color:black">1</h1></div>
+         <div class="img" id="d2"><h1><iframe src="https://phet.colorado.edu/sims/html/charges-and-fields/latest/charges-and-fields_en.html"
+            width="800"
+            height="600"
+            allowfullscreen>
+    </iframe></h1></div>
+        <div class="img" id="d3"><h1>3</h1></div>
+        <div class="img" id="4">
+            <div id="inside4">
+            <img src="naruto-thumbsup.gif" style="float: right;" alt="">
+            <h1 class="head">UZZUMAKI</h1>
+            <h1 class="head">NARUTO</h1>
+            <h1 style="font-size: 3em;">SIGNING OFF</h1>
+            </div>
+        </div> 
+    </div>
+    <div class="nav">
+        <button class="btn" id="prev">PREV</button>
+        <button class="btn" id="next">NEXT</button>
+    </div>
+    <script>
+        let img = document.querySelectorAll(".img");
+        let next = document.querySelector("#next");
+        let prev = document.querySelector("#prev");
+        var i = 1;
+        var changex = 0;
+        next.addEventListener("click",()=>{
+            i++;
+            changex+=70;
+            change();
+        });
+        prev.addEventListener("click",()=>{
+            i--;
+            changex-=70;
+            change();
+        });
+        function change(){
+            if(i==1){
+                prev.style.display="none";
+                next.style.display="inline";
+            }
+            else if(i==img.length){
+                next.style.display="none";
+                prev.style.display="inline";
+            }
+            else{
+                prev.style.display="inline";
+                next.style.display="inline";
+            }
+            img.forEach((el)=>{
+                el.style.translate = `-${changex}vw 0vw`;
+            });
+        }
+        change();
+     
+
+    </script>
+</body>
+</html>
